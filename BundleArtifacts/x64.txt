@@ -1,0 +1,2 @@
+MainPackage=C:\Users\aleix\Documents\GitHub\NewZip\bin\x64\Debug\NewZip_1.0.6.0_x64_Debug.appx
+SymbolPackage=C:\Users\aleix\Documents\GitHub\NewZip\obj\x64\Debug\Symbols\NewZip_1.0.6.0_x64_Debug.appxsym

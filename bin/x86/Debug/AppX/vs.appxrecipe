@@ -19,24 +19,24 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\aleix\Documents\GitHub\NewZip\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>0FB7431D4040C6E7A1602DD2E4BCAFBCE55EF43CE92CE5F68A16128940DD333E</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>01c5ae29-ae00-43b3-8b34-1d0b96139719_1.0.7.0_x86__vbvsc5hn1bx6g</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>5F07A000C8712CAF33726976314D761B15491BC1B391D97BD920AAF6A5F47C11</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>01c5ae29-ae00-43b3-8b34-1d0b96139719_1.0.8.0_x86__vbvsc5hn1bx6g</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>01c5ae29-ae00-43b3-8b34-1d0b96139719_vbvsc5hn1bx6g!App</RegisteredUserModeAppID>
     <RegisteredPackageID>01c5ae29-ae00-43b3-8b34-1d0b96139719</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=Tupi</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.7.0</RegisteredVersion>
+    <RegisteredVersion>1.0.8.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\aleix\Documents\GitHub\NewZip\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-06-29T18:18:35.960</Modified>
+      <Modified>2020-06-30T16:45:39.600</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\aleix\Documents\GitHub\NewZip\bin\x86\Debug\NewZip.exe">
       <PackagePath>entrypoint\NewZip.exe</PackagePath>
-      <Modified>2020-06-29T18:18:34.725</Modified>
+      <Modified>2020-06-30T16:45:38.281</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -538,15 +538,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aleix\Documents\GitHub\NewZip\bin\x86\Debug\NewZip.xr.xml">
       <PackagePath>NewZip.xr.xml</PackagePath>
-      <Modified>2020-06-21T18:10:58.770</Modified>
+      <Modified>2020-06-30T16:39:01.134</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aleix\Documents\GitHub\NewZip\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-06-29T18:18:33.911</Modified>
+      <Modified>2020-06-30T16:45:37.511</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aleix\Documents\GitHub\NewZip\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-06-29T18:18:33.913</Modified>
+      <Modified>2020-06-30T16:45:37.512</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -554,11 +554,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aleix\Documents\GitHub\NewZip\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-06-20T19:21:59.321</Modified>
+      <Modified>2020-06-30T16:09:56.839</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aleix\Documents\GitHub\NewZip\bin\x86\Debug\Core\NewZip.exe">
       <PackagePath>NewZip.exe</PackagePath>
-      <Modified>2020-06-29T18:18:35.905</Modified>
+      <Modified>2020-06-30T16:45:39.539</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

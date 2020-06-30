@@ -34,15 +34,5 @@
                      VerticalAlignment="Center" Margin="0,0,0,100" IsEnabled="True" Visibility="Collapsed"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Name="CenterText"/>
 
-        <FlyoutBase.AttachedFlyout>
-            <Flyout x:Name="FlyoutCompress">
-                <StackPanel>
-                    <TextBlock Name="TextFlyout" Text="¡Bienvenido a la ayuda oficial de NewZip! ¿Qué deseas saber?" Margin="0,0,0,12" />
-                    <Button Content="¿Cómo comprimo?"/>
-                    <Button Content="¿Cómo descomprimo?"/>
-                </StackPanel>
-            </Flyout>
-        </FlyoutBase.AttachedFlyout>
-        
     </Grid>
 </Page>

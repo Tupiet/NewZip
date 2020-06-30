@@ -35,7 +35,6 @@ namespace NewZip
         public MainPage()
         {
             this.InitializeComponent();
-
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
@@ -59,20 +58,22 @@ namespace NewZip
             folderFinal.SuggestedStartLocation = PickerLocationId.Desktop;
             folderFinal.FileTypeFilter.Add("*");
 
-            StorageFolder folder = await folderPicker.PickSingleFolderAsync();
-            StorageFolder folderEnd = await folderFinal.PickSingleFolderAsync();
-
-            StorageApplicationPermissions.FutureAccessList.AddOrReplace("PickedFolderToken", folder);
-            StorageApplicationPermissions.FutureAccessList.AddOrReplace("ZipFinal", folderEnd);
-
-            StorageFolder newFolder;
-            StorageFolder zipFolder;
-
-            newFolder = await StorageApplicationPermissions.FutureAccessList.GetFolderAsync("PickedFolderToken");
-            zipFolder = await StorageApplicationPermissions.FutureAccessList.GetFolderAsync("ZipFinal");
+            
 
             try
             {
+                StorageFolder folder = await folderPicker.PickSingleFolderAsync();
+                StorageFolder folderEnd = await folderFinal.PickSingleFolderAsync();
+
+                StorageApplicationPermissions.FutureAccessList.AddOrReplace("PickedFolderToken", folder);
+                StorageApplicationPermissions.FutureAccessList.AddOrReplace("ZipFinal", folderEnd);
+
+                StorageFolder newFolder;
+                StorageFolder zipFolder;
+
+                newFolder = await StorageApplicationPermissions.FutureAccessList.GetFolderAsync("PickedFolderToken");
+                zipFolder = await StorageApplicationPermissions.FutureAccessList.GetFolderAsync("ZipFinal");
+
                 if (await Task.Run(() => File.Exists(zipFolder.Path + "/" + wishedZipName + ".zip")))
                 {
                     var result = await dialogFailed.ShowAsync();
@@ -176,9 +177,40 @@ namespace NewZip
             }
         }
 
-        private void HelpButton_Click(object sender, RoutedEventArgs e)
+        private async void HelpButton_Click(object sender, RoutedEventArgs e)
         {
-            FlyoutCompress.ShowAt(CenterText);
+            var message = new ContentDialog();
+            message.Title = "¿Necesitas ayuda?";
+            message.Content = "¡Bienvenido a la página oficial de ayuda! \nSelecciona en qué necesitas ayuda.";
+            message.PrimaryButtonText = "Comprimir";
+            message.SecondaryButtonText = "Descomprimir";
+
+
+            var compress = new ContentDialog();
+            compress.Title = "¿Cómo comprimo?";
+            compress.Content = "Introduzca el nombre de archivo que desea obtener. " +
+                "Seleccione el botón COMPRIMIR. Una vez hecho, se abrirán dos ventanas. " +
+                    "Primero, seleccione la carpeta a comprimir. Luego, la carpeta de destinación.";
+            compress.CloseButtonText = "¡Entendido!";
+            compress.DefaultButton = ContentDialogButton.Close;
+
+            var descompress = new ContentDialog();
+            descompress.Title = "¿Cómo descomprimo?";
+            descompress.Content = "Introduzca el nombre de carpeta que desea obtener. " +
+                "Seleccione el botón DESCOMPRIMIR. Una vez hecho, se abrirán dos ventanas. " +
+                    "Primero, seleccione el archivo comprimido. Luego, la carpeta de destinación.";
+            descompress.CloseButtonText = "¡Entendido!";
+            descompress.DefaultButton = ContentDialogButton.Close;
+
+            var result = await message.ShowAsync();
+
+            if (result == ContentDialogResult.Primary)
+            {
+                await compress.ShowAsync();
+            } else if (result == ContentDialogResult.Secondary)
+            {
+                await descompress.ShowAsync();
+            }
         }
     }
 }

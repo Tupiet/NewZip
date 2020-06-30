@@ -7,7 +7,7 @@
 
     Para obtener más información acerca de los archivos de manifiesto del paquete, vea http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="01c5ae29-ae00-43b3-8b34-1d0b96139719" Publisher="CN=Tupi" Version="1.0.7.0" ProcessorArchitecture="x86" />
+  <Identity Name="01c5ae29-ae00-43b3-8b34-1d0b96139719" Publisher="CN=Tupi" Version="1.0.8.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="01c5ae29-ae00-43b3-8b34-1d0b96139719" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>NewZip</DisplayName>

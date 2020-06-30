@@ -10,23 +10,40 @@
 
     <Grid>
         <Grid Margin="0,0,200,0" HorizontalAlignment="Center">
-            <Button x:ConnectionId='6' Content="Comprimir" Margin="0,100,0,0" VerticalAlignment="Center" 
-                    HorizontalAlignment="Center"                     />
-            <TextBox x:ConnectionId='7' HorizontalAlignment="Center" Margin="0,0,0,0" Text="Archivo" 
+            <Button x:ConnectionId='10' Content="Comprimir" Margin="0,100,0,0" VerticalAlignment="Center" 
+                    HorizontalAlignment="Center"                      Name="CompressButton" />
+            <TextBox x:ConnectionId='11' HorizontalAlignment="Center" Margin="0,0,0,0" Text="Archivo" 
                     TextWrapping="Wrap" VerticalAlignment="Center" Name="WishedName" TextAlignment="Center"/>
         </Grid>
         <Grid HorizontalAlignment="Center" Margin="200,0,0,0">
-            <Button x:ConnectionId='4' Content="Descomprimir" Margin="0,100,0,0" VerticalAlignment="Center" 
-                    HorizontalAlignment="Center"                        />
-            <TextBox x:ConnectionId='5' HorizontalAlignment="Center" Margin="0,0,0,0" Text="Archivo" 
+            <Button x:ConnectionId='8' Content="Descomprimir" Margin="0,100,0,0" VerticalAlignment="Center" 
+                    HorizontalAlignment="Center"                        Name="DescompressButton" />
+            <TextBox x:ConnectionId='9' HorizontalAlignment="Center" Margin="0,0,0,0" Text="Archivo" 
                     TextWrapping="Wrap" VerticalAlignment="Center" Name="WishedFolder" TextAlignment="Center"/>
         </Grid>
         <CommandBar VerticalAlignment="Bottom" Margin="0,0,0,0">
-            <AppBarButton x:ConnectionId='2' Label="Cambiar tema" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="105"                    >
-                <FontIcon x:ConnectionId='3' Name="ThemeImage" FontFamily="Segoe MDL2 Assets" Glyph="&#xE706;"></FontIcon>
+            <AppBarButton x:ConnectionId='4' Label="¿Cómo funciona?" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="105"                         >
+                <FontIcon x:ConnectionId='7' Name="HelpButton" FontFamily="Segoe MDL2 Assets" Glyph="&#xE897;"></FontIcon>
             </AppBarButton>
+            <AppBarButton x:ConnectionId='5' Label="Cambiar tema" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="105"                    >
+                <FontIcon x:ConnectionId='6' Name="ThemeImage" FontFamily="Segoe MDL2 Assets" Glyph="&#xE706;"></FontIcon>
+            </AppBarButton>
+            
         </CommandBar>
+        <ProgressBar x:ConnectionId='2' Width="130" Name="progressItem" IsIndeterminate="True" HorizontalAlignment="Center" 
+                     VerticalAlignment="Center" Margin="0,0,0,100" IsEnabled="True" Visibility="Collapsed"/>
+        <TextBlock x:ConnectionId='3' HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Name="CenterText"/>
 
+        <FlyoutBase.AttachedFlyout>
+            <Flyout x:ConnectionId='12' x:Name="FlyoutCompress">
+                <StackPanel>
+                    <TextBlock x:ConnectionId='13' Name="TextFlyout" Text="¡Bienvenido a la ayuda oficial de NewZip! ¿Qué deseas saber?" Margin="0,0,0,12" />
+                    <Button Content="¿Cómo comprimo?"/>
+                    <Button Content="¿Cómo descomprimo?"/>
+                </StackPanel>
+            </Flyout>
+        </FlyoutBase.AttachedFlyout>
+        
     </Grid>
 </Page>
 

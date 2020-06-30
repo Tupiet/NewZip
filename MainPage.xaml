@@ -11,21 +11,38 @@
     <Grid>
         <Grid Margin="0,0,200,0" HorizontalAlignment="Center">
             <Button Content="Comprimir" Margin="0,100,0,0" VerticalAlignment="Center" 
-                    HorizontalAlignment="Center" Click="Button_Click"/>
+                    HorizontalAlignment="Center" Click="Button_Click" Name="CompressButton" />
             <TextBox HorizontalAlignment="Center" Margin="0,0,0,0" Text="Archivo" 
                     TextWrapping="Wrap" VerticalAlignment="Center" Name="WishedName" TextAlignment="Center"/>
         </Grid>
         <Grid HorizontalAlignment="Center" Margin="200,0,0,0">
             <Button Content="Descomprimir" Margin="0,100,0,0" VerticalAlignment="Center" 
-                    HorizontalAlignment="Center" Click="Button_Click_1" />
+                    HorizontalAlignment="Center" Click="Button_Click_1" Name="DescompressButton" />
             <TextBox HorizontalAlignment="Center" Margin="0,0,0,0" Text="Archivo" 
                     TextWrapping="Wrap" VerticalAlignment="Center" Name="WishedFolder" TextAlignment="Center"/>
         </Grid>
         <CommandBar VerticalAlignment="Bottom" Margin="0,0,0,0">
+            <AppBarButton Label="¿Cómo funciona?" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="105" Click="HelpButton_Click">
+                <FontIcon Name="HelpButton" FontFamily="Segoe MDL2 Assets" Glyph="&#xE897;"></FontIcon>
+            </AppBarButton>
             <AppBarButton Label="Cambiar tema" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="105" Click="ChangeTheme">
                 <FontIcon Name="ThemeImage" FontFamily="Segoe MDL2 Assets" Glyph="&#xE706;"></FontIcon>
             </AppBarButton>
+            
         </CommandBar>
+        <ProgressBar Width="130" Name="progressItem" IsIndeterminate="True" HorizontalAlignment="Center" 
+                     VerticalAlignment="Center" Margin="0,0,0,100" IsEnabled="True" Visibility="Collapsed"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Name="CenterText"/>
 
+        <FlyoutBase.AttachedFlyout>
+            <Flyout x:Name="FlyoutCompress">
+                <StackPanel>
+                    <TextBlock Name="TextFlyout" Text="¡Bienvenido a la ayuda oficial de NewZip! ¿Qué deseas saber?" Margin="0,0,0,12" />
+                    <Button Content="¿Cómo comprimo?"/>
+                    <Button Content="¿Cómo descomprimo?"/>
+                </StackPanel>
+            </Flyout>
+        </FlyoutBase.AttachedFlyout>
+        
     </Grid>
 </Page>

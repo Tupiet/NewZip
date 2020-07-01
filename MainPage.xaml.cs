@@ -167,6 +167,7 @@ namespace NewZip
             if (this.RequestedTheme == ElementTheme.Dark)
             {
                 this.RequestedTheme = ElementTheme.Light;
+                
                 ThemeImage.Glyph = "\xE706";
 
             }
@@ -185,7 +186,6 @@ namespace NewZip
             message.PrimaryButtonText = "Comprimir";
             message.SecondaryButtonText = "Descomprimir";
 
-
             var compress = new ContentDialog();
             compress.Title = "¿Cómo comprimo?";
             compress.Content = "Introduzca el nombre de archivo que desea obtener. " +
@@ -201,6 +201,18 @@ namespace NewZip
                     "Primero, seleccione el archivo comprimido. Luego, la carpeta de destinación.";
             descompress.CloseButtonText = "¡Entendido!";
             descompress.DefaultButton = ContentDialogButton.Close;
+
+            if (this.RequestedTheme == ElementTheme.Light)
+            {
+                message.RequestedTheme = ElementTheme.Light;
+                compress.RequestedTheme = ElementTheme.Light;
+                descompress.RequestedTheme = ElementTheme.Light;
+            } else if (this.RequestedTheme == ElementTheme.Dark)
+            {
+                message.RequestedTheme = ElementTheme.Dark;
+                compress.RequestedTheme = ElementTheme.Dark;
+                descompress.RequestedTheme = ElementTheme.Dark;
+            }
 
             var result = await message.ShowAsync();
 

@@ -12,7 +12,7 @@
         <Grid Margin="0,0,200,0" HorizontalAlignment="Center">
             <Button x:ConnectionId='10' Content="Comprimir" Margin="0,100,0,0" VerticalAlignment="Center" 
                     HorizontalAlignment="Center"                      Name="CompressButton" />
-            <TextBox x:ConnectionId='11' HorizontalAlignment="Center" Margin="0,0,0,0" Text="Archivo" 
+            <TextBox x:ConnectionId='11' HorizontalAlignment="Center" Margin="0,0,0,0" Text="Archivo"  
                     TextWrapping="Wrap" VerticalAlignment="Center" Name="WishedName" TextAlignment="Center"/>
         </Grid>
         <Grid HorizontalAlignment="Center" Margin="200,0,0,0">
@@ -33,6 +33,8 @@
         <ProgressBar x:ConnectionId='2' Width="130" Name="progressItem" IsIndeterminate="True" HorizontalAlignment="Center" 
                      VerticalAlignment="Center" Margin="0,0,0,100" IsEnabled="True" Visibility="Collapsed"/>
         <TextBlock x:ConnectionId='3' HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Name="CenterText"/>
+        
+        
 
     </Grid>
 </Page>

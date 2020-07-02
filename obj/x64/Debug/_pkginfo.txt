@@ -1,1 +1,1 @@
-C:\Users\aleix\Documents\GitHub\NewZip\AppPackages\NewZip_2.0.3.0_Debug_Test\NewZip_2.0.3.0_x64_Debug.appxbundle
+C:\Users\aleix\Documents\GitHub\NewZip\AppPackages\NewZip_2.0.4.0_Debug_Test\NewZip_2.0.4.0_x64_Debug.appxbundle

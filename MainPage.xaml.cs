@@ -42,13 +42,28 @@ namespace NewZip
             string wishedZipName = WishedName.Text;
 
             var dialogFailed = new ContentDialog();
-            var dialogComplete = new MessageDialog("¡Perfecto! Su archivo ya fue comprimido.");
+            var dialogComplete = new ContentDialog();
+
+            if (this.RequestedTheme == ElementTheme.Light)
+            {
+                dialogFailed.RequestedTheme = ElementTheme.Light;
+                dialogComplete.RequestedTheme = ElementTheme.Light;
+            } else if (this.RequestedTheme == ElementTheme.Dark)
+            {
+                dialogFailed.RequestedTheme = ElementTheme.Dark;
+                dialogComplete.RequestedTheme = ElementTheme.Dark;
+            }
 
             dialogFailed.Title = "¿Desea sobreescribir?";
             dialogFailed.Content = "Parece que este archivo ya existe.";
             dialogFailed.PrimaryButtonText = "Sobreescribir";
             dialogFailed.CloseButtonText = "Cancelar";
             dialogFailed.DefaultButton = ContentDialogButton.Primary;
+
+            dialogComplete.Title = "¡Completado!";
+            dialogComplete.Content = "Su archivo ya fue comprimido. ;)";
+            dialogComplete.CloseButtonText = "Cancelar";
+            dialogComplete.DefaultButton = ContentDialogButton.Close;
 
             var folderPicker = new FolderPicker();
             folderPicker.SuggestedStartLocation = PickerLocationId.Desktop;
@@ -57,8 +72,6 @@ namespace NewZip
             var folderFinal = new FolderPicker();
             folderFinal.SuggestedStartLocation = PickerLocationId.Desktop;
             folderFinal.FileTypeFilter.Add("*");
-
-            
 
             try
             {
@@ -105,13 +118,29 @@ namespace NewZip
             string zipName = WishedFolder.Text;
 
             var dialogFailed = new ContentDialog();
-            var dialogComplete = new MessageDialog("¡Perfecto! Su archivo ya fue descomprimido.");
+            var dialogComplete = new ContentDialog();
+
+            if (this.RequestedTheme == ElementTheme.Light)
+            {
+                dialogFailed.RequestedTheme = ElementTheme.Light;
+                dialogComplete.RequestedTheme = ElementTheme.Light;
+            }
+            else if (this.RequestedTheme == ElementTheme.Dark)
+            {
+                dialogFailed.RequestedTheme = ElementTheme.Dark;
+                dialogComplete.RequestedTheme = ElementTheme.Dark;
+            }
 
             dialogFailed.Title = "¿Desea sobreescribir?";
             dialogFailed.Content = "Parece que esta carpeta ya existe.";
             dialogFailed.PrimaryButtonText = "Sobreescribir";
             dialogFailed.CloseButtonText = "Cancelar";
             dialogFailed.DefaultButton = ContentDialogButton.Primary;
+
+            dialogComplete.Title = "¡Completado!";
+            dialogComplete.Content = "Su archivo ya fue descomprimido. ;)";
+            dialogComplete.CloseButtonText = "Cancelar";
+            dialogComplete.DefaultButton = ContentDialogButton.Close;
 
             var zipPicker = new FileOpenPicker();
             zipPicker.SuggestedStartLocation = PickerLocationId.Downloads;
